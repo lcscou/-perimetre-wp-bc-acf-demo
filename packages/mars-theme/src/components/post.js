@@ -84,6 +84,8 @@ const Post = ({ state, actions, libraries }) => {
         // processed by the processors we included in the
         // libraries.html2react.processors array.
         <Content>
+          <h1>{post.acf.first_section.section_title}</h1>
+          <Html2React html={post.acf.first_section.section_content} />
           <Html2React html={post.content.rendered} />
         </Content>
       )}
